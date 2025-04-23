@@ -26,7 +26,7 @@ app.get('/api/swap/defi', async (req, res) => {
       `https://api.1inch.io/v5.0/${CHAIN_IDS[chain.toUpperCase()]}/quote`, 
       {
         params: { fromTokenAddress: from, toTokenAddress: to, amount },
-        headers: { 'Authorization': `Bearer ${process.env['1Inch_API_KEY']}` }
+        headers: { 'Authorization': `Bearer ${process.env['Inch_API_KEY']}` }
       }
     );
     res.json(response.data);
